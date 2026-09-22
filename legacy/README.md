@@ -1,4 +1,8 @@
-# Radio Atlas
+# Radio Atlas (Omarchy legacy)
+
+> This is the original Omarchy/QML implementation, preserved for reference.
+> Active development is the COSMIC rewrite documented in the repository's
+> [README](../README.md).
 
 Explore live radio on a rotatable globe from the Omarchy bar. Click a station
 signal to play it, or click a country to browse its stations. Playback runs in
