@@ -1,0 +1,15 @@
+[workspace]
+members = ["crates/radio-core", "crates/radio-player", "crates/radio-tasks", "app", "applet"]
+resolver = "2"
+
+[workspace.package]
+edition = "2024"
+license = "MIT"
+repository = "https://github.com/goshitsarch-eng/cosmic-radio-atlas"
+rust-version = "1.85"
+
+[workspace.lints.rust]
+unsafe_code = "forbid"
+
+[profile.release]
+lto = "thin"

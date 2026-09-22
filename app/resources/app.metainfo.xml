@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>io.github.goshitsarcheng.RadioAtlas</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>MIT</project_license>
+  <name>Radio Atlas</name>
+  <summary>Explore live radio on a rotatable globe</summary>
+  <icon type="remote" width="64" height="64" scale="1">
+    https://github.com/goshitsarch-eng/cosmic-radio-atlas/raw/main/app/resources/icons/hicolor/scalable/apps/icon.svg
+  </icon>
+  <url type="vcs-browser">https://github.com/goshitsarch-eng/cosmic-radio-atlas</url>
+  <launchable type="desktop-id">io.github.goshitsarcheng.RadioAtlas.desktop</launchable>
+  <provides>
+    <id>com.system76.CosmicApplication</id>
+    <binaries>
+      <binary>cosmic-radio-atlas</binary>
+    </binaries>
+  </provides>
+  <requires>
+    <display_length compare="ge">360</display_length>
+  </requires>
+  <supports>
+    <control>keyboard</control>
+    <control>pointing</control>
+    <control>touch</control>
+  </supports>
+  <categories>
+    <category>AudioVideo</category>
+    <category>Player</category>
+  </categories>
+  <keywords>
+    <keyword>radio</keyword>
+    <keyword>world</keyword>
+    <keyword>globe</keyword>
+    <keyword>music</keyword>
+    <keyword>station</keyword>
+  </keywords>
+  <content_rating type="oars-1.1" />
+</component>

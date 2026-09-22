@@ -1,0 +1,17 @@
+[package]
+name = "radio-tasks"
+version = "0.1.0"
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+description = "Async background tasks shared by the Cosmic Radio Atlas app and applet"
+
+[dependencies]
+radio-core = { path = "../radio-core" }
+radio-player = { path = "../radio-player" }
+serde_json = "1.0"
+tokio = { version = "1", features = ["rt"] }
+
+[lints]
+workspace = true

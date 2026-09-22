@@ -2,3 +2,6 @@
 *.qmlc
 *.jsc
 /videos/
+/target/
+app/target/
+applet/target/

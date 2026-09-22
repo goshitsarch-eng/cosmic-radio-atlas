@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=Radio Atlas Applet
+Comment=Panel controls for Radio Atlas
+Type=Application
+Icon=io.github.goshitsarcheng.RadioAtlasApplet
+Exec=cosmic-applet-radio-atlas
+Terminal=false
+StartupNotify=true
+Categories=COSMIC
+Keywords=radio;applet;
+NoDisplay=true
+X-CosmicApplet=true
+MimeType=

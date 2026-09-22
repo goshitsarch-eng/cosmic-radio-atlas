@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>io.github.goshitsarcheng.RadioAtlasApplet</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>MIT</project_license>
+  <name>Radio Atlas Applet</name>
+  <summary>Panel controls for Radio Atlas</summary>
+  <url type="vcs-browser">https://github.com/goshitsarch-eng/cosmic-radio-atlas</url>
+  <launchable type="desktop-id">io.github.goshitsarcheng.RadioAtlasApplet.desktop</launchable>
+  <provides>
+    <id>com.system76.CosmicApplet</id>
+    <binaries>
+      <binary>cosmic-applet-radio-atlas</binary>
+    </binaries>
+  </provides>
+  <supports>
+    <control>pointing</control>
+  </supports>
+  <keywords>
+    <keyword>radio</keyword>
+    <keyword>applet</keyword>
+  </keywords>
+  <content_rating type="oars-1.1" />
+</component>

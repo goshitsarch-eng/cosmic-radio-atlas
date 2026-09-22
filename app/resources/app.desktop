@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Radio Atlas
+Comment=Explore live radio on a rotatable globe
+Type=Application
+Icon=io.github.goshitsarcheng.RadioAtlas
+Exec=cosmic-radio-atlas %F
+Terminal=false
+StartupNotify=true
+Categories=AudioVideo;Audio;Player;COSMIC
+Keywords=radio;world;globe;music;station;
+MimeType=

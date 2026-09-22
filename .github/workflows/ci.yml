@@ -13,7 +13,37 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  test:
+  rust:
+    runs-on: ubuntu-26.04
+    timeout-minutes: 45
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install --yes build-essential pkg-config \
+            libwayland-dev libxkbcommon-dev libegl-dev libdbus-1-dev libexpat1-dev
+
+      - name: Install Rust
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          components: clippy, rustfmt
+
+      - name: Check formatting
+        run: cargo fmt --all --check
+
+      - name: Run backend tests
+        run: cargo test --locked -p radio-core -p radio-player -p radio-tasks
+
+      - name: Run clippy
+        run: cargo clippy --workspace --all-targets --locked -- -D warnings
+
+      - name: Check app and applet
+        run: cargo check --workspace --locked
+
+  omarchy-legacy:
     runs-on: ubuntu-26.04
     timeout-minutes: 10
     steps:
@@ -34,5 +64,6 @@ jobs:
           # Ubuntu's child profile denies CAP_NET_ADMIN needed to bring loopback up.
           sudo apparmor_parser --remove /etc/apparmor.d/bwrap-userns-restrict
 
-      - name: Run tests
+      - name: Run legacy Omarchy tests
         run: ./tests/run
+        working-directory: legacy
